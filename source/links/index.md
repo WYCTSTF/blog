@@ -9,4 +9,4 @@ date: 2024-08-23 17:52:13
 
 [asanosaki](https://asanosaki.github.io)
 
-[YLQQ](https://www.ylq1104.cn)
+[YLQQ](https://ylqqqq.github.io/)
