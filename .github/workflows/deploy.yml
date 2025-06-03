@@ -30,7 +30,3 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           port: ${{ secrets.SERVER_PORT }}
           key: ${{ secrets.SERVER_SSH_KEY }}
-          source: "public/**"          # 递归所有文件
-          target: "/srv/hexo/blog"     # 目标根
-          strip_components: 1          # ★ 去掉第一层 “public”
-          rm: true                     # （可选）上传前先清空目标
