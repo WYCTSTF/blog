@@ -105,6 +105,7 @@ int main() {
 可能是因为选数的时候 $t[i] + t[i + 1] <= t[i + 2]$ 这个性质比较玄学吧
 
 而且我把判断放到循环里 直接快进到15ms
+
 ```cpp
 auto dfs = [&](auto self, int now, long long tem, int cnt) -> void {
     if (tem > n) return;
@@ -117,6 +118,7 @@ auto dfs = [&](auto self, int now, long long tem, int cnt) -> void {
     }
   };
 ```
+
 -----
 
 D E比赛的时候都没有做出来 就只有一点点思路
