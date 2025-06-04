@@ -6,10 +6,12 @@ menu:
   Home: /
   Archives: /archives
   Links: /links
+  Feeds: /feeds
+  Presentations: /presentations
 # RSS link
 rss: /atom.xml
 # Path of title banner image of page top
-banner: "/images/weicao.jpg"
+banner: "/images/shuangye11.png"
 # Subtitle of page top
 subtitle:
 # Header links with icon, specified links will appear at the top right corner of the page
