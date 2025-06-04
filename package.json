@@ -28,8 +28,6 @@
     "hexo-server": "^3.0.0",
     "hexo-tag-embed": "^1.0.0",
     "hexo-theme-landscape": "^1.1.0",
-    "tree-sitter": "^0.21.1",
-    "tree-sitter-cpp": "^0.23.1",
-    "tree-sitter-python": "^0.23.6"
+    "tree-sitter": "^0.21.1"
   }
 }
