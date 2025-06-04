@@ -2,7 +2,7 @@
 title: Codeforces Round 813 (Div. 2)
 tags: 
   - Codeforces
-date: 2022.8.14
+date: 2022-08-14
 ---
 
 学好二分，走遍天下都不怕..

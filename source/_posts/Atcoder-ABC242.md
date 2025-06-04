@@ -4,7 +4,7 @@ tags:
 	- Atcoder
 	- DP
 description: At的规律题还是一如既往的让人头疼..
-date: 2022.3.6
+date: 2022-03-06
 ---
 
 ## C - 1111gal password

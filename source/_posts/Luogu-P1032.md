@@ -4,7 +4,7 @@ tags:
   - KMP
   - 双向BFS
 mathjax: true
-date: 2022.2.12
+date: 2022-02-12
 ---
 KMP+双向同时BFS
 

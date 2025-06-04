@@ -3,7 +3,7 @@ title: 平衡树相关
 tags: 
 	- 算法模板
 	- 平衡树
-date: 2022.11.16
+date: 2022-11-16
 mathjax: true
 ---
 

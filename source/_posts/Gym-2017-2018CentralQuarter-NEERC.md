@@ -3,7 +3,7 @@ title: 2017-2018 ICPC Central Quarter Final of NEERC - C 「Magic FootBall」
 tags:
   - 思维
   - 剪枝
-date: 2022.3.11
+date: 2022-03-11
 ---
 
 XY给我推荐的一道好题

@@ -3,7 +3,7 @@ title: Codeforces Round 776 (Div. 3)「B - E」
 tags: 
 	- Codeforces
 	- 模拟
-date: 2022.3.9
+date: 2022-03-09
 ---
 
 Div3.. 倒开车失败
