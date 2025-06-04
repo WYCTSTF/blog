@@ -1,6 +1,6 @@
 ---
 title: vim配置
-date: 2023.5.16
+date: 2023-05-16
 tags:
   - vim
   - 折腾

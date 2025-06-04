@@ -6,7 +6,7 @@ tags:
     - Hash
     - Manacher
     - Trie
-date: 2022.2.10
+date: 2022-02-10
 ---
 
 hash, trie, kmp, manacher

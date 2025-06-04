@@ -2,7 +2,7 @@
 title: 值类别和引用浅析
 tags:
     - C++
-date: 2023.3.24
+date: 2023-03-24
 ---
 
 本文使用的Clang/LLVM环境：

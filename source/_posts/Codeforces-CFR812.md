@@ -2,7 +2,7 @@
 title: Codeforces Round 812 (Div. 2)
 tags: 
   - Codeforces
-date: 2022.8.7
+date: 2022-08-07
 ---
 
 中间困了好久，， D就不想做

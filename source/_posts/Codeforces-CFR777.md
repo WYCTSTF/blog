@@ -3,7 +3,7 @@ title: Codeforces Round 777 (Div. 2)「B - E」
 tags: 
 	- Codeforces
 	- 模拟
-date: 2022.3.13
+date: 2022-03-13
 mathjax: true
 ---
 

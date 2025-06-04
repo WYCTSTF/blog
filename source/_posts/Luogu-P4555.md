@@ -2,7 +2,7 @@
 title: 洛谷P4555 [国家集训队] 最长双回文串
 tags:
     - Manacher
-date: 2023.4.21
+date: 2023-04-21
 ---
 
 [传送门](https://www.luogu.com.cn/problem/P4555), manacher板子题

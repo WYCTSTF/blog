@@ -2,7 +2,7 @@
 title: Codeforces Round 815 (Div. 2)
 tags: 
   - Codeforces
-date: 2022.8.19
+date: 2022-08-19
 ---
 
 该多练了.

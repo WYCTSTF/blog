@@ -1,6 +1,6 @@
 ---
 title: The Missing Semester 笔记
-date: 2023.2.13
+date: 2023-02-13
 tags:
     - Shell
 ---
