@@ -6,7 +6,7 @@
   # footer: 页脚信息
   # search: 文章搜索
 
-# enable: 是否开启相应功能，可选true || false
+# enable: 是否开启相应功能，可选 true 或 false
 
 # 网站图标
 favicon:
