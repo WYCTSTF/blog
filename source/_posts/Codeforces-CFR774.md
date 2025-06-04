@@ -6,7 +6,7 @@ tags:
 	- 位运算
 	- Codeforces
 description: 好久没做CF了 要加练
-date: 2022.3.6
+date: 2022-03-06
 ---
 
 ## C. Factorials and Powers of Two

@@ -1,6 +1,6 @@
 ---
 title: Codeforces Round 810 (Div. 2)
-date: 2022.7.24
+date: 2022-07-24
 tags: 
   - Codeforces
 ---
