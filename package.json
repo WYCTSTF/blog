@@ -30,6 +30,6 @@
     "hexo-theme-landscape": "^1.1.0",
     "tree-sitter": "^0.21.1",
     "tree-sitter-cpp": "^0.23.1",
-    "tree-sitter-python": "^0.23.2"
+    "tree-sitter-python": "^0.23.6"
   }
 }
