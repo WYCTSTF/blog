@@ -107,10 +107,5 @@ deploy:
   repo: ssh://japan:/root/blog/repo
   branch: master
 
-search:
-  path: search.xml
-  field: post
-  content: true
-
 plugins:
 - hexo-renderer-mathjax
