@@ -42,8 +42,12 @@ WSL Ubuntu 24.04
 
 ## 下载tvm源码
 
+v0.21.dev0和v0.20.0都是没有tvm.relay的，很抽象，文档和代码都是一坨。
+
 ```bash
 git clone --recursive https://github.com/apache/tvm tvm
+git checkout v0.19.0
+git submodule update --init --recursive
 ```
 
 ## 编译安装
