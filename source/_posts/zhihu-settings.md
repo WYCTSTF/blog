@@ -17,4 +17,4 @@ ALT+按键切换会弹出无障碍，很烦人，装 ublock origin 插件，在*
 
 知乎的web UI 不仅没宽屏，边上还堆砌一些一辈子都不会点开的元素。
 
-使用 [知乎修改器](https://greasyfork.org/zh-CN/scripts/423404) 删掉不需要的元素
+使用 [知乎修改器](https://greasyfork.org/zh-CN/scripts/423404) 删掉不需要的元素。
