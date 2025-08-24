@@ -98,7 +98,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: hexo-theme-landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -108,4 +108,8 @@ deploy:
   branch: master
 
 plugins:
-- hexo-renderer-mathjax
+  - hexo-renderer-mathjax
+search:
+  path: search.json
+  field: post
+  content: true
