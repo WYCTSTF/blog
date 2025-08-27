@@ -18,6 +18,7 @@ subtitle:
 # Each name must correspond to the icon name of Fork Awesome
 # https://forkaweso.me/Fork-Awesome/icons/
 links:
+  github: https://github.com/WYCTSTF
 #  github: https://github.com/your_github_account
 #  twitter: https://twitter.com/your_twitter_account
 #  telegram: https://t.me/your_telegram_account
@@ -47,17 +48,16 @@ copyright:
 sidebar: right
 # Widgets displaying in sidebar
 widgets:
-- category
-- tag
-- recent_posts
+  - tagcloud
+  - recent_posts
 
 # ===============
 # Widget behavior
 # ===============
 archive_type: 'monthly'
-show_count: false
+show_count: true
 # How many posts display in Home page.
-recent_posts_limits: 5
+recent_posts_limits: 10
 
 # ===============
 # Miscellaneous
