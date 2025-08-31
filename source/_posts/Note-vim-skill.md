@@ -87,6 +87,10 @@ set undodir=~/.vim/undodir
 
 * \* 和 \# 直接跳转到光标所在单词的下一个或上一个位置
 
+# 拓展
+
+更多操作请猛击[Vim cheatsheet](https://cheatsheets.zip/vim)
+
 # 参考资料
 * [为什么看似简陋的vim在熟练的人手中如此的神乎其技？ - kidneyball的回答 - 知乎](https://www.zhihu.com/question/433183204/answer/1712185019)
 * [如何使用原生 vim 覆盖90%的插件功能 - 鹅厂架构师的文章 - 知乎](https://zhuanlan.zhihu.com/p/599417117)
