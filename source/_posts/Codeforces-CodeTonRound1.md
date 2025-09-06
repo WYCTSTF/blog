@@ -3,7 +3,7 @@ title: CodeTON Round 1 (Div. 1 + Div. 2, Rated, Prizes!) 「A - F」
 tags:
 	- 分类讨论
 	- 模拟
-    - Codeforces
+  - Codeforces
 mathjax: true
 date: 2022-03-25
 ---
