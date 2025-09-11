@@ -1,5 +1,5 @@
 ---
-title: blog-design
+title: 哄蒙博客大纲
 date: 2025-09-12 00:12:53
 tags:
 mathjax: true
