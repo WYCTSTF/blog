@@ -2,6 +2,7 @@
 title: blog-design
 date: 2025-09-12 00:12:53
 tags:
+mathjax: true
 ---
 
 博客设计，暂时没有明确的技术栈，甚至写出来的东西前后端不分离，or实现的功能之后丢到后端。
