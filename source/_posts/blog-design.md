@@ -13,7 +13,11 @@ mathjax: true
 
 <!-- more -->
 
-# 当前计划
+# ToDo:
+* [ ] 解析markdown到html
+* [ ] 代码高亮
+
+# 需求清单
 
 ## 解析
 
@@ -41,3 +45,10 @@ mathjax: true
 * Presentation
   * 貌似没有很拿得出手的东西。很长一段时间内估计还是挂之前做的上课ppt
 * TIL和Feeds似乎对我来说暂时没什么用。倒是可以弄个单子列想玩的技♂术。and一些生活上的事儿可以单开一小个子集。能算上两个页签。
+
+# 学习路线
+
+一整个DFS... 这一堆单子需要从下往上完成
+
+* [ ] hexo解析markdown对应代码走读
+* [ ] [typescript快速上手](https://learnxinyminutes.com/zh-cn/typescript/)
