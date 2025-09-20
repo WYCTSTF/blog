@@ -26,14 +26,21 @@ Integer i = (Integer) list.get(0); // 运行时异常
 
 但由于类型擦除，运行时并没有类型检查，所以 `List<Integer>` 和 `List<String>` 在运行时是一样的。
 
-并不是引入泛型就能避免所有的类型转换异常。
+并不是引入泛型就能避免所有的类型转换异常。理解这一点就理解了工程中需要注意点所在。
 
 ```java
-List<String>[] array = new List[10];  // 这里编译器会警告 unchecked
+// 用原始类型数组（合法，但会有 unchecked 警告）
+List<String>[] array = (List<String>[]) new List[10];
+
 List<Integer> intList = List.of(1, 2, 3);
 
-Object[] objArray = array;  
-objArray[0] = intList;  // 编译能过，因为数组的运行时类型只知道是 Object[]
+Object[] objArray = array;   // 数组是协变的，可以赋值给 Object[]
+objArray[0] = intList;       // 往里面放 List<Integer>
 
-String s = array[0].get(0); // ClassCastException
+// 取的时候编译器以为里面是 List<String>
+String s = array[0].get(0);  // 运行时 ClassCastException
 ```
+
+有些说法表示类型擦除和值类别的缺失是缺陷也是区别于cpp的特点。那我问你（
+
+实际工作缺失不伐能跑就别动的场景。突然想到自己值类别那篇blog即没讲清楚又啰嗦还没讲完，有空重写吧。
