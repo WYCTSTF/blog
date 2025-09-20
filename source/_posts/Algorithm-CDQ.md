@@ -3,6 +3,8 @@ title: CDQ分治笔记
 tags: 
 	- 算法模板
 	- CDQ分治
+category:
+    - 算法
 date: 2022-09-19
 ---
 
