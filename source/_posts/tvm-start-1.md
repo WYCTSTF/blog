@@ -12,7 +12,7 @@ tvm version 0.21.dev0
 
 <!-- more -->
 
-[TVM官方文档](tvm.apache.org/docs/)
+[TVM官方文档](https://tvm.apache.org/docs/)
 
 # 从源码安装
 
