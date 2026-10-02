@@ -39,4 +39,4 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "public/*"
-          target: "/srv/hexo/blog"
+          target: "/var/www/blog"
