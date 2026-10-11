@@ -101,12 +101,7 @@ ignore:
 theme: hexo-theme-landscape
 
 # Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: git
-  repo: ssh://japan:/root/blog/repo
-  branch: master
-
+## 部署由 GitHub Actions 自动完成(.github/workflows/deploy.yml),push 即上线
 plugins:
   - hexo-renderer-mathjax
 search:
