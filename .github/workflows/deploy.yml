@@ -1,8 +1,9 @@
-name: Deploy to Server via SCP
+name: Deploy to Server (manual fallback)
 
+# 日常发布走本地 scripts/publish.sh（构建 + rsync，秒级）。
+# 本工作流仅作从源码重建的兜底：本地环境异常或换机器时在 Actions 页手动触发。
 on:
-  push:
-    branches: [master]  # 或你实际使用的分支名
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -10,33 +11,31 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
+          cache: npm
 
       - name: Install dependencies
-        run: npm install
-
-      - name: Clean Hexo cache
-        run: npx hexo clean
+        run: npm ci
 
       - name: Generate static files
         run: npx hexo generate
-      
-      - name: change css
-        run: "sed -i '/^#header {$/,/^}$/s/height: 300px;/height: 200px;/' public/css/style.css"
 
-      - name: Deploy to Server via SCP
-        uses: appleboy/scp-action@v0.1.4
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          port: ${{ secrets.SERVER_PORT }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          source: "public/*"
-          target: "/var/www/blog"
+      - name: Deploy to Server via rsync
+        env:
+          SSH_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          SERVER_HOST: ${{ secrets.SERVER_HOST }}
+          SERVER_USER: ${{ secrets.SERVER_USER }}
+          SERVER_PORT: ${{ secrets.SERVER_PORT }}
+        run: |
+          install -m 600 /dev/null ~/deploy_key
+          echo "$SSH_KEY" > ~/deploy_key
+          rsync -az --delete --exclude=/.well-known/ \
+            -e "ssh -i ~/deploy_key -p $SERVER_PORT -o StrictHostKeyChecking=no" \
+            public/ "$SERVER_USER@$SERVER_HOST:/var/www/blog/public/"
