@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # 一条命令发布博客：增量构建 → rsync 上线 → git 归档（后台账本，不再是发布门槛）
-# 用法: ./scripts/publish.sh [commit 消息]     完整发布
-#       ./scripts/publish.sh --dry-run         只构建 + rsync 预览，不上线不提交
+# 用法: ./publish.sh [commit 消息]     完整发布
+#       ./publish.sh --dry-run         只构建 + rsync 预览，不上线不提交
 set -euo pipefail
 
-cd "$(dirname "$0")/.."
+cd "$(dirname "$(readlink -f "$0")")"
 REMOTE="sg:/var/www/blog/public/"
 RSYNC_OPTS=(--delete --exclude=/.well-known/ --chown=blogdeploy:blogdeploy)
 
