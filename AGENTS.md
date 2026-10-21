@@ -16,6 +16,19 @@ Hexo 博客（themes/hexo-theme-landscape 子模块）。人类不直接操作 g
 commit → push。全量约 6 秒，无变更约 2 秒（自动跳过提交）。`--dry-run` 只预览
 不上线。执行后如实汇报结果（耗时、提交哈希、失败原因），**部署失败不得说成成功**。
 
+## 提交消息由代理撰写（重要）
+
+脚本的自动消息只是兜底（仅依据文件名，不可读）。**代理发布时若用户没有明确给出
+提交消息，必须先看未提交变更（`git status --short` + `git diff`）概括内容**，
+写一条具体、可读的中文 Conventional Commit 作为参数传入，例如：
+
+```bash
+./publish.sh "docs: 新增 hexo 本地 rsync 发布的踩坑记录"
+```
+
+描述要说清「改了什么内容」，不要写「更新文章」这类空话。主题子模块发布时
+需概括改动点（如 `chore: 更新主题子模块，header 样式改用变量`）。
+
 ## 写作
 
 - 新文章：`npx hexo new post "标题"`（生成 source/_posts/xxx.md）

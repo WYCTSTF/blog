@@ -40,14 +40,19 @@ if git diff --cached --quiet; then
   echo "内容无变化，跳过提交"
 else
   if [[ -z "$MSG" ]]; then
+    # 兜底消息：只有文件名可依据（理想情况是代理/用户传入概括内容的消息）
     changed=$(git diff --cached --name-only)
     posts=$(echo "$changed" | grep '^source/_posts/.*\.md$' || true)
-    if [[ -n "$posts" && "$(echo "$changed" | wc -l)" -eq "$(echo "$posts" | wc -l)" ]]; then
-      new_post=$(git diff --cached --name-only --diff-filter=A -- source/_posts | grep '\.md$' | head -1 || true)
-      if [[ -n "$new_post" ]]; then
-        MSG="docs: 新增文章 $(basename "$new_post" .md)"
+    join_names() { awk '{printf "%s%s", (NR>1 ? "、" : ""), $0}'; }
+    if [[ -n "$posts" && "$(echo "$changed" | wc -l)" -eq "$(echo "$posts" | grep -c .)" ]]; then
+      new_posts=$(git diff --cached --name-only --diff-filter=A -- source/_posts | grep '\.md$' || true)
+      if [[ -n "$new_posts" ]]; then
+        MSG="docs: 新增文章 $(echo "$new_posts" | xargs -n1 basename | sed 's/\.md$//' | join_names)"
       else
-        MSG="docs: 更新文章"
+        n=$(echo "$posts" | grep -c .)
+        names=$(echo "$posts" | head -3 | xargs -n1 basename | sed 's/\.md$//' | join_names)
+        [[ $n -gt 3 ]] && names="$names 等 ${n} 篇"
+        MSG="docs: 更新文章 $names"
       fi
     elif [[ "$changed" == themes/* ]]; then
       MSG="chore: 更新主题子模块"
