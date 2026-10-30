@@ -13,5 +13,6 @@
   <meta name="color-scheme" content="light dark">
   <title><%= title %></title>
   <% if (config.description) { %><meta name="description" content="<%= config.description %>"><% } %>
+  <link rel="icon" href="data:,">
   <link rel="alternate" type="application/atom+xml" title="<%= config.title %>" href="<%- url_for('/atom.xml') %>">
-  <link rel="stylesheet" href="<%- url_for('/css/style.css') %>">
+  <style><%- inline_css('assets/style.css') %></style>
