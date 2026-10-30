@@ -1,0 +1,11 @@
+<header id="header">
+  <div class="site">
+    <a class="site-title" href="<%- url_for('/') %>"><%= config.title %></a>
+    <% if (config.subtitle) { %><span class="subtitle"><%= config.subtitle %></span><% } %>
+  </div>
+  <nav>
+    <% for (var name in theme.menu) { %>
+      <a href="<%- url_for(theme.menu[name]) %>"><%= name %></a>
+    <% } %>
+  </nav>
+</header>

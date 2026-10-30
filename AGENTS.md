@@ -1,7 +1,11 @@
 # AGENTS.md — 给 AI 代理的仓库说明
 
-Hexo 博客（themes/hexo-theme-landscape 子模块）。人类不直接操作 git 和部署，
+Hexo 博客（当前使用仓库内的极简主题 `themes/plain`）。人类不直接操作 git 和部署，
 由 AI 代理代劳。本文件是发布流程的唯一权威说明。
+
+前端约束：**不引入客户端 JS，不依赖外部 CDN**；数学公式在构建期转成 MathML；
+新增功能优先服务端渲染。旧主题 `themes/hexo-theme-landscape` 子模块仅作历史保留，
+不再启用。
 
 ## 意图识别（核心）
 
@@ -41,9 +45,8 @@ commit → push。全量约 6 秒，无变更约 2 秒（自动跳过提交）�
 2. **禁止 `git push --force`、`git reset --hard` 已推送的提交、`git push --delete`**——
    远端 master 是唯一备份，历史不可篡改
 3. `scripts/` 是 Hexo 插件目录（里面所有文件会被当 JS 加载），shell 脚本一律放仓库根
-4. 改主题（themes/hexo-theme-landscape）：先在子模块里提交并推送到 fork
-   （git@github.com:WYCTSTF/hexo-theme-landscape.git），再回主仓库提交子模块指针，
-   顺序不能反；`./publish.sh` 对此有警告
+4. 改主题（`themes/plain`）：直接在主仓库提交；它不再是子模块。
+   若以后重新启用 `themes/hexo-theme-landscape`，才走「先推子模块 fork、再提交指针」的旧流程
 5. 提交消息用 Conventional Commits 中文描述（docs:/chore:/feat:/ci:）
-6. header 高度等主题样式覆盖走 `scripts/header-css.js`（渲染时注入），
-   不要改构建产物，不要加 CI sed 步骤
+6. 不要重新引入客户端 JS / 外部 CDN（jQuery、fancybox、MathJax、搜索脚本等）；
+   数学公式由 `@traptitech/markdown-it-katex` 在构建期输出 MathML

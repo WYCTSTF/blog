@@ -1,0 +1,7 @@
+<h1>Tag: <%= page.tag %></h1>
+<ul class="archive-list">
+<% page.posts.each(function(post){ %>
+  <li><time datetime="<%- post.date.toISOString() %>"><%= date(post.date, 'YYYY-MM-DD') %></time> <a href="<%- url_for(post.path) %>"><%= post.title %></a></li>
+<% }) %>
+</ul>
+<%- partial('_partial/pagination') %>

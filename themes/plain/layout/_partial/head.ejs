@@ -1,0 +1,17 @@
+<%
+  var title = config.title;
+  var pageTitle = page.title;
+  if (!pageTitle && page.archive) {
+    pageTitle = 'Archives';
+  }
+  if (pageTitle && pageTitle !== config.title) {
+    title = pageTitle + ' | ' + config.title;
+  }
+%>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title><%= title %></title>
+  <% if (config.description) { %><meta name="description" content="<%= config.description %>"><% } %>
+  <link rel="alternate" type="application/atom+xml" title="<%= config.title %>" href="<%- url_for('/atom.xml') %>">
+  <link rel="stylesheet" href="<%- url_for('/css/style.css') %>">

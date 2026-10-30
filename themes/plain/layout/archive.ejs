@@ -1,0 +1,16 @@
+<h1>Archives<% if (page.year) { %>: <%= page.year %><% if (page.month) { %>/<%= page.month %><% } %><% } %></h1>
+
+<% var lastYear = null; %>
+<% page.posts.each(function(post){ %>
+  <% var year = post.date.year(); %>
+  <% if (year !== lastYear) { %>
+    <% if (lastYear !== null) { %></ul><% } %>
+    <% lastYear = year; %>
+    <h2><%= year %></h2>
+    <ul class="archive-list">
+  <% } %>
+  <li><time datetime="<%- post.date.toISOString() %>"><%= date(post.date, 'MM-DD') %></time> <a href="<%- url_for(post.path) %>"><%= post.title %></a></li>
+<% }) %>
+<% if (lastYear !== null) { %></ul><% } %>
+
+<%- partial('_partial/pagination') %>

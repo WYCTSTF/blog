@@ -1,0 +1,10 @@
+# Minimal theme: no client-side JS, no external CDN.
+menu:
+  Home: /
+  Archives: /archives/
+  Tags: /tags/
+  Feeds: /feeds/
+  Presentations: /presentations/
+  Links: /links/
+
+rss: /atom.xml

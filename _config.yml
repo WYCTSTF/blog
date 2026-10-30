@@ -8,7 +8,7 @@ subtitle: 他人即地狱
 description: ''
 keywords:
 author: SYH
-language: en
+language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
@@ -43,9 +43,9 @@ render_drafts: false
 post_asset_folder: true
 relative_link: false
 future: true
-syntax_highlighter: highlight.js
+syntax_highlighter:
 highlight:
-  enable: true
+  enable: false
   line_number: false
   auto_detect: false
   tab_replace: ''
@@ -56,6 +56,21 @@ prismjs:
   preprocess: true
   line_number: true
   tab_replace: ''
+
+# Markdown renderer (hexo-renderer-markdown-it)
+markdown:
+  preset: default
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: false
+  plugins:
+    - name: '@traptitech/markdown-it-katex'
+      options:
+        throwOnError: false
+        output: mathml
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -98,13 +113,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-landscape
+theme: plain
 
 # Deployment
 ## 部署由 GitHub Actions 自动完成(.github/workflows/deploy.yml),push 即上线
-plugins:
-  - hexo-renderer-mathjax
-search:
-  path: search.json
-  field: post
-  content: true
