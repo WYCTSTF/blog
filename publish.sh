@@ -92,8 +92,15 @@ else
     fi
   fi
   git commit -m "$MSG"
-  git push
   echo "已归档: $(git log -1 --format='%h %s')"
+fi
+
+# 有未推送的提交就推：工作区没变化、只是补推历史提交时也要走这一段
+ahead=$(git log '@{u}..HEAD' --oneline 2>/dev/null || true)
+if [[ -n "$ahead" ]]; then
+  echo "==> git push（$(echo "$ahead" | wc -l | tr -d ' ') 个提交待推）"
+  git push
+  echo "已推送: $(git log -1 --format='%h %s')"
 fi
 
 echo "✅ 发布完成，耗时 ${SECONDS}s"
