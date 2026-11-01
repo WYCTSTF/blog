@@ -1,12 +1,12 @@
 <% if (page.type === 'tags') { %>
-  <h1>标签</h1>
+  <h1>Tags</h1>
   <ul class="term-list">
   <% site.tags.sort('name').each(function(tag){ %>
     <li><a href="<%- url_for(tag.path) %>"><%= tag.name %></a> <span class="count"><%= tag.posts.length %></span></li>
   <% }) %>
   </ul>
 <% } else if (page.type === 'categories') { %>
-  <h1>分类</h1>
+  <h1>Categories</h1>
   <ul class="term-list">
   <% site.categories.sort('name').each(function(category){ %>
     <li><a href="<%- url_for(category.path) %>"><%= category.name %></a> <span class="count"><%= category.posts.length %></span></li>

@@ -95,7 +95,7 @@ hexo.extend.helper.register('topic_heatmap', function () {
       ${rows}
     </div>
   </div>
-  <p class="hm-legend"><span class="hm-legend-label">少</span>${legend}<span class="hm-legend-label">多</span><span class="hm-legend-note">共 ${posts.length} 篇 · ${span}</span></p>
+  <p class="hm-legend"><span class="hm-legend-label">Less</span>${legend}<span class="hm-legend-label">More</span><span class="hm-legend-note">${posts.length} posts · ${span}</span></p>
 </div>`;
 });
 

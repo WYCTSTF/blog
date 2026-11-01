@@ -52,6 +52,6 @@ hexo.extend.filter.register('after_post_render', function (data) {
     .map((i) => `<li class="toc-h${i.level}"><a href="#${i.id}">${i.text}</a></li>`)
     .join('');
 
-  data.toc = `<nav class="toc">\n<p class="toc-title">目录</p>\n<ul>${list}</ul>\n</nav>`;
+  data.toc = `<nav class="toc">\n<p class="toc-title">Contents</p>\n<ul>${list}</ul>\n</nav>`;
   return data;
 });

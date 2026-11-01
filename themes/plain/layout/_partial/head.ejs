@@ -1,14 +1,14 @@
 <%
   var pageTitle = page.title;
   if (!pageTitle) {
-    if (page.type === 'tags') pageTitle = '标签';
-    else if (page.type === 'categories') pageTitle = '分类';
-    else if (page.tag) pageTitle = '标签：' + page.tag;
-    else if (page.category) pageTitle = '分类：' + page.category;
-    else if (page.archive) pageTitle = '归档';
+    if (page.type === 'tags') pageTitle = 'Tags';
+    else if (page.type === 'categories') pageTitle = 'Categories';
+    else if (page.tag) pageTitle = 'Tag: ' + page.tag;
+    else if (page.category) pageTitle = 'Category: ' + page.category;
+    else if (page.archive) pageTitle = 'Archives';
   }
   if (page.current && page.current > 1) {
-    pageTitle = (pageTitle ? pageTitle + ' ' : '') + '第 ' + page.current + ' 页';
+    pageTitle = (pageTitle ? pageTitle + ' ' : '') + 'Page ' + page.current;
   }
   var title = (pageTitle && pageTitle !== config.title) ? pageTitle + ' | ' + config.title : config.title;
 

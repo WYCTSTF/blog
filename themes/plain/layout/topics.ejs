@@ -1,9 +1,7 @@
-<h1>主题</h1>
-<p class="meta">行是分类，列是季度，色块深浅是文章数量——能一眼看出每个阶段在写什么。</p>
+<h1>Topics</h1>
 
 <%- topic_heatmap() %>
 
-<h2>分类</h2>
 <ul class="term-list">
 <% site.categories.sort('name').each(function(category){ %>
   <li><a href="<%- url_for(category.path) %>"><%= category.name %></a> <span class="count"><%= category.posts.length %></span></li>

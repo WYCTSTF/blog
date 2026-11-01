@@ -1,12 +1,12 @@
 # Minimal theme: no client-side JS, no external CDN.
 menu:
-  首页: /
-  归档: /archives/
-  分类: /categories/
-  主题: /topics/
-  碎碎念: /feeds/
-  演示: /presentations/
-  传送门: /links/
+  Home: /
+  Archives: /archives/
+  Categories: /categories/
+  Topics: /topics/
+  Feeds: /feeds/
+  Presentations: /presentations/
+  Links: /links/
 
 rss: /atom.xml
 

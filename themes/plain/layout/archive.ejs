@@ -1,4 +1,4 @@
-<h1>归档<% if (page.year) { %>: <%= page.year %><% if (page.month) { %> 年 <%= page.month %> 月<% } %><% } %></h1>
+<h1>Archives<% if (page.year) { %>: <%= page.year %><% if (page.month) { %>/<%= page.month %><% } %><% } %></h1>
 
 <% var lastYear = null; %>
 <% page.posts.each(function(post){ %>
