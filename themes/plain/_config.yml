@@ -3,9 +3,13 @@ menu:
   首页: /
   归档: /archives/
   分类: /categories/
-  标签: /tags/
+  主题: /topics/
   碎碎念: /feeds/
   演示: /presentations/
   传送门: /links/
 
 rss: /atom.xml
+
+# 主题页热力矩阵的时间粒度：quarter（2022 Q1…Q4）或 year（2022…2026）
+heatmap:
+  unit: quarter

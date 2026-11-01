@@ -53,6 +53,9 @@ CRLF 会让 WSL 里的 shebang 直接报 `bash\r: No such file or directory`。
 - front-matter 必须写全：`title` / `date` / `tags` / `categories`
   （分类只从 算法 / 题解 / 工具链 / 计算机基础 / 杂谈 / Java 里选）
 - 正文必须有 `<!-- more -->`，否则首页只有标题没有摘要
+- 标签（`tags`）**不作为导航 UI**：不再有标签总览页，标签只用于构建期生成文末「相关笔记」，
+  正文/列表都不展示标签链接。主题入口是 `/topics/`（分类 × 季度的热力矩阵，构建期渲染），
+  粒度可在 `themes/plain/_config.yml` 的 `heatmap.unit` 里改 `quarter`/`year`
 - 图片放 `source/_posts/<同名目录>/` 里用相对路径引用（`post_asset_folder: true`）；
   不要写 `../images/xxx.png` 这类相对路径，站点根路径 `/images/xxx.png` 只服务
   `source/images/` 下的文件

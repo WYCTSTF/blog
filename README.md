@@ -38,7 +38,7 @@ front-matter 至少包含 `title` / `date` / `tags` / `categories`，正文里�
 | 路径 | 说明 |
 |---|---|
 | `source/_posts/` | 文章（`post_asset_folder: true`，图片放同名目录） |
-| `source/` 其余 | 独立页面：categories / tags / links / presentations / feeds / 404 |
+| `source/` 其余 | 独立页面：categories / **topics（主题热力图）** / links / presentations / feeds / 404 |
 | `themes/plain/` | 主题模板 + 内联 CSS |
-| `scripts/` | Hexo 构建期插件（TOC、折叠、CSS 内联） |
+| `scripts/` | Hexo 构建期插件（TOC、折叠、CSS 内联、主题热力图、相关笔记） |
 | `publish.sh` | 唯一发布入口 |
