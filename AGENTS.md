@@ -74,3 +74,6 @@ CRLF 会让 WSL 里的 shebang 直接报 `bash\r: No such file or directory`。
    数学公式由 `@traptitech/markdown-it-katex` 在构建期输出 MathML
 7. 构建产物里不应出现 `.md` 文件、`css/`、`js/`、`search.json`、`fancybox/`
    等旧主题残留；发布前可用 `grep -c 'article class="post"' public/index.html` 快速自检
+8. `/tags/<tag>/` 页面仍然生成（保住老链接），但**没有任何入口**：不在菜单、不在 sitemap、
+   文章和列表也不链接它；`/tags/` 由 nginx 301 到 `/topics/`
+9. 改版背景与踩坑记录见 `docs/refactor-2026-11.md`（含可重复执行的验证命令）

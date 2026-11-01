@@ -42,3 +42,4 @@ front-matter 至少包含 `title` / `date` / `tags` / `categories`，正文里�
 | `themes/plain/` | 主题模板 + 内联 CSS |
 | `scripts/` | Hexo 构建期插件（TOC、折叠、CSS 内联、主题热力图、相关笔记） |
 | `publish.sh` | 唯一发布入口 |
+| `docs/` | 改造记录与踩坑（`refactor-2026-11.md`） |

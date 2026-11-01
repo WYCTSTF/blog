@@ -1,8 +1,7 @@
 <%
   var pageTitle = page.title;
   if (!pageTitle) {
-    if (page.type === 'tags') pageTitle = 'Tags';
-    else if (page.type === 'categories') pageTitle = 'Categories';
+    if (page.type === 'categories') pageTitle = 'Categories';
     else if (page.tag) pageTitle = 'Tag: ' + page.tag;
     else if (page.category) pageTitle = 'Category: ' + page.category;
     else if (page.archive) pageTitle = 'Archives';

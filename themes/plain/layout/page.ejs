@@ -1,11 +1,4 @@
-<% if (page.type === 'tags') { %>
-  <h1>Tags</h1>
-  <ul class="term-list">
-  <% site.tags.sort('name').each(function(tag){ %>
-    <li><a href="<%- url_for(tag.path) %>"><%= tag.name %></a> <span class="count"><%= tag.posts.length %></span></li>
-  <% }) %>
-  </ul>
-<% } else if (page.type === 'categories') { %>
+<% if (page.type === 'categories') { %>
   <h1>Categories</h1>
   <ul class="term-list">
   <% site.categories.sort('name').each(function(category){ %>
