@@ -7,6 +7,10 @@ Hexo 博客（使用仓库内的极简主题 `themes/plain`）。人类不直接
 新增功能优先服务端渲染（目录 `scripts/toc.js`、折叠 `scripts/fold-details.js` 都是
 构建期产物）。
 
+> 本文件只写"发布与提交"的行为约束。站点结构、写文章/改主题约定、已知坑清单、
+> 验证命令、以及**改动后要同步更新哪些文档**，都在 `.agents/skills/blog-notes/SKILL.md`。
+> 动手改文章/主题/配置/脚本前先读它；提交前按它第 6 节自检。`CLAUDE.md` 是入口索引。
+
 ## 意图识别（核心）
 
 用户说「写好了」「发布」「上传」「推上去」「更新博客」以及任何语义等价的表达
@@ -24,7 +28,7 @@ commit → push。全量约 6 秒，无变更约 2 秒（自动跳过提交）�
 所以 **`publish.sh` 必须保持 LF 行尾**（`.gitattributes` 已声明 `*.sh text eol=lf`），
 CRLF 会让 WSL 里的 shebang 直接报 `bash\r: No such file or directory`。
 
-脚本会在构建后自检 `public/index.html` 里有没有文章列表，0 篇直接报错退出（见下）。
+脚本会在构建后自检 `public/index.html` 里有没有文章列表，0 篇直接报错退出（通常是依赖漂移，见规则 8）。
 
 ## 提交消息由代理撰写（重要）
 
@@ -39,27 +43,11 @@ CRLF 会让 WSL 里的 shebang 直接报 `bash\r: No such file or directory`。
 描述要说清「改了什么内容」，不要写「更新文章」这类空话。改主题时概括改动点
 （如 `chore: 主题 header 样式改用变量`）。
 
-## 依赖（踩过的坑）
+## 细则
 
-- **改过 `package.json` 必须 `npm install`**。依赖漂移时 Hexo 会把 `.md` 当成静态资源，
-  模板渲染器缺失时 `hexo generate` 会「成功」输出 0 篇文章，还会把整批 `.md`
-  复制进 `public/`。
-- 不要装会引入客户端 JS 的插件；渲染器只保留 `hexo-renderer-ejs` + `hexo-renderer-markdown-it`。
-- 换机器/CI 用 `npm ci`（`package-lock.json` 必须提交）。
-
-## 写作约定
-
-- 新文章：`npx hexo new post "标题"`（生成 `source/_posts/xxx.md` 与同名资源目录）
-- front-matter 必须写全：`title` / `date` / `tags` / `categories`
-  （分类只从 算法 / 题解 / 工具链 / 计算机基础 / 杂谈 / Java 里选）
-- 正文必须有 `<!-- more -->`，否则首页只有标题没有摘要
-- 标签（`tags`）**不作为导航 UI**：不再有标签总览页，标签只用于构建期生成文末「相关笔记」，
-  正文/列表都不展示标签链接。主题入口是 `/topics/`（分类 × 季度的热力矩阵，构建期渲染），
-  粒度可在 `themes/plain/_config.yml` 的 `heatmap.unit` 里改 `quarter`/`year`
-- 图片放 `source/_posts/<同名目录>/` 里用相对路径引用（`post_asset_folder: true`）；
-  不要写 `../images/xxx.png` 这类相对路径，站点根路径 `/images/xxx.png` 只服务
-  `source/images/` 下的文件
-- 本地实时预览：`npm run server`（http://localhost:4000）；草稿先别生成到正式目录
+写文章、改主题、改配置、写构建期脚本、排查构建/发布异常 → 先读
+`.agents/skills/blog-notes/SKILL.md`（含速览、约定、坑、验证、文档维护义务），
+不要在别处另记一份，避免两套说法打架。
 
 ## 硬性规则
 
@@ -74,6 +62,8 @@ CRLF 会让 WSL 里的 shebang 直接报 `bash\r: No such file or directory`。
    数学公式由 `@traptitech/markdown-it-katex` 在构建期输出 MathML
 7. 构建产物里不应出现 `.md` 文件、`css/`、`js/`、`search.json`、`fancybox/`
    等旧主题残留；发布前可用 `grep -c 'article class="post"' public/index.html` 快速自检
-8. `/tags/<tag>/` 页面仍然生成（保住老链接），但**没有任何入口**：不在菜单、不在 sitemap、
+8. **改过 `package.json` 必须 `npm install`**（依赖漂移会让构建静默生成 0 篇）
+9. `/tags/<tag>/` 页面仍然生成（保住老链接），但**没有任何入口**：不在菜单、不在 sitemap，
    文章和列表也不链接它；`/tags/` 由 nginx 301 到 `/topics/`
-9. 改版背景与踩坑记录见 `docs/refactor-2026-11.md`（含可重复执行的验证命令）
+10. 改完必须按 `.agents/skills/blog-notes/SKILL.md` 第 6 节同步文档，同一提交内完成；
+    历史背景见 `docs/refactor-2026-11.md`（一次性快照，不作规则来源）
