@@ -6,9 +6,6 @@
       <% if (page.categories && page.categories.length) { %>
         · <% page.categories.each(function(c){ %><a href="<%- url_for(c.path) %>"><%= c.name %></a> <% }) %>
       <% } %>
-      <% if (page.tags && page.tags.length) { %>
-        · <% page.tags.each(function(t){ %><a href="<%- url_for(t.path) %>">#<%= t.name %></a> <% }) %>
-      <% } %>
     </p>
   </header>
   <%- page.toc || '' %>
@@ -19,3 +16,18 @@
   <% if (page.prev) { %><a href="<%- url_for(page.prev.path) %>">← <%= page.prev.title %></a><% } else { %><span></span><% } %>
   <% if (page.next) { %><a href="<%- url_for(page.next.path) %>"><%= page.next.title %> →</a><% } %>
 </nav>
+
+<% var related = related_posts(page); %>
+<% if (related.length) { %>
+<nav class="related">
+  <p class="related-title">相关笔记</p>
+  <ul>
+  <% related.forEach(function(post){ %>
+    <li>
+      <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+      <time datetime="<%- post.date.toISOString() %>"><%= date(post.date, 'YYYY-MM') %></time>
+    </li>
+  <% }) %>
+  </ul>
+</nav>
+<% } %>

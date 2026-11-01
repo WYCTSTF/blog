@@ -241,3 +241,121 @@ h1, h2, h3, h4 {
   color: var(--muted);
   font-style: italic;
 }
+
+/* 主题 × 时间 热力矩阵（构建期生成，无 JS） */
+.hm {
+  margin: 2rem 0 2.5rem;
+}
+
+.hm-scroll {
+  overflow-x: auto;
+  padding-bottom: .35rem;
+}
+
+.hm-grid {
+  display: grid;
+  grid-template-columns: 7.5rem repeat(var(--cols), 1.15rem);
+  gap: 3px 4px;
+  align-items: center;
+  font-size: .8rem;
+  width: max-content;
+}
+
+.hm-corner {
+  min-height: 1px;
+}
+
+.hm-year {
+  color: var(--muted);
+  font-size: .75rem;
+  letter-spacing: .05em;
+}
+
+.hm-q {
+  color: var(--muted);
+  font-size: .6rem;
+  text-align: center;
+  line-height: 1;
+}
+
+.hm-row {
+  display: flex;
+  justify-content: space-between;
+  gap: .4rem;
+  white-space: nowrap;
+  color: var(--fg);
+  border-bottom: 1px solid transparent;
+}
+
+.hm-row:hover {
+  border-bottom-color: var(--rule);
+  text-decoration: none;
+}
+
+.hm-row .count {
+  color: var(--muted);
+  font-size: .75rem;
+}
+
+.hm-c {
+  display: block;
+  height: .9rem;
+  border-radius: 2px;
+  background: var(--rule);
+  opacity: .18;
+}
+
+.hm-c.l1 { background: var(--link); opacity: .28; }
+.hm-c.l2 { background: var(--link); opacity: .5; }
+.hm-c.l3 { background: var(--link); opacity: .75; }
+.hm-c.l4 { background: var(--link); opacity: 1; }
+
+.hm-legend {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  margin: .6rem 0 0;
+  color: var(--muted);
+  font-size: .75rem;
+}
+
+.hm-legend .hm-c {
+  width: .8rem;
+  height: .8rem;
+}
+
+.hm-legend-label {
+  margin: 0 .2rem;
+}
+
+.hm-legend-note {
+  margin-left: auto;
+}
+
+/* 相关笔记 */
+.related {
+  margin: 2.5rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+}
+
+.related-title {
+  margin: 0 0 .5rem;
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+.related ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.related li {
+  margin: .3rem 0;
+}
+
+.related time {
+  margin-left: .5rem;
+  color: var(--muted);
+  font-size: .8rem;
+}

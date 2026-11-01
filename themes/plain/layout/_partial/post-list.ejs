@@ -6,9 +6,6 @@
     <% if (post.categories && post.categories.length) { %>
       · <% post.categories.each(function(c){ %><a href="<%- url_for(c.path) %>"><%= c.name %></a> <% }) %>
     <% } %>
-    <% if (post.tags && post.tags.length) { %>
-      · <% post.tags.each(function(t){ %><a href="<%- url_for(t.path) %>">#<%= t.name %></a> <% }) %>
-    <% } %>
   </p>
   <% if (showExcerpt && post.excerpt) { %>
     <div class="excerpt"><%- post.excerpt %></div>
