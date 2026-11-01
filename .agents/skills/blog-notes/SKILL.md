@@ -51,6 +51,7 @@ publish.sh           hexo generate → 自检 → rsync 到 sg → git commit �
 | 用 Python 批量改 front-matter 后文章"消失" | `hexo-front-matter` 只认 **LF** 分隔符，写了 CRLF 就解析不出 | 改完必须 `hexo generate` 并核对篇数 |
 | 标签/分类改了但页面 404，或标签莫名少几个 | 历史文件用单数 `tag:` / `category:` 键，只解析 `tags:` 的脚本会当空 | 迁移脚本要同时处理两种键，迁移后对比新旧标签集合差集 |
 | 数学公式显示成纯文本，还出现奇怪的链接 | 公式块没包 `$$`（KaTeX 只认 `$…$` / `$$…$$`），裸 `\begin{align}` 会被 linkify | 块级公式一律 `$$` 包起来 |
+| 用 `published: false` 下线文章后，构建仍把它的图片输出到**别的文章**目录下（实录：Fix-SayItOrNot 的截图被输出到 `2022/03/23/Algorithm-BIT/1.png`） | hexo 7.3.0 在 Windows 路径下 PostAsset 归属错乱（db.json 里 slug 变 `\\1.png`、post 挂到字母序更前的文章），下线文章的资源目录仍被扫描 | 下线文章时把它的资源目录一并移出 `source/`（`git rm`，历史可找回）；已有脏记录 `hexo clean` 清 db.json 后消失 |
 | feed 里所有文章都显示"刚刚更新" | `updated_option: 'mtime'`，工作区 mtime 会被检出/同步改写 | 保持 `updated_option: 'date'`，真实更新时间手写 `updated` |
 | 删过/重建过的 URL 一直 404，源站却是 200 | Cloudflare 把这个 zone 的 HTML 也缓存了（含 404） | 到后台 Purge 该 URL 或 Purge Everything |
 | 菜单是英文但页面标题是中文 | 页面 front-matter 的 `title` 各自为政 | 页面标题跟菜单保持一致，改菜单时顺手改页面 title |
