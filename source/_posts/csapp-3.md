@@ -5,6 +5,7 @@ tags:
   - csapp
 categories:
   - 计算机基础
+published: false
 ---
 
 第二章跳过了，对着一堆学过的概念重新补充数学定义,2的次幂倒腾来去没啥意思

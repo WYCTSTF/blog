@@ -5,6 +5,7 @@ tags:
   - Haskell
 categories:
   - 计算机基础
+published: false
 ---
 
 重新审视了一下对Haskell的态度，感觉想要认证的学Haskell而不是用一个符号来标榜自己对函数式有理解，还是要踏实点为好。实际上趣学指南
