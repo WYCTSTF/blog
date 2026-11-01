@@ -1,11 +1,11 @@
 ---
 title: 关于ICPC、作弊现象、训练态度的一点思考
-tags:
-    - 想法
-category:
-    - 杂谈
 date: 2023-06-09 02:36:21
 # sticky: true
+tags:
+  - 想法
+categories:
+  - 杂谈
 ---
 
 随便写写，不要当真

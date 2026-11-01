@@ -2,10 +2,10 @@
 title: JAVA 泛型
 date: 2025-09-20 03:27:18
 tags:
-    - Java
-    - 泛型
-category:
-    - Java
+  - Java
+  - 泛型
+categories:
+  - Java
 ---
 
 首先是一个知乎问题：

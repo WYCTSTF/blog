@@ -5,8 +5,11 @@
 # Site
 title: SYH's Note
 subtitle: 他人即地狱
-description: ''
+description: '算法、题解与折腾记录'
 keywords:
+  - 算法
+  - 题解
+  - 笔记
 author: SYH
 language: zh-CN
 timezone: 'Asia/Shanghai'
@@ -17,7 +20,7 @@ url: https://blog.syh521.cn
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_index: false # 页面链接不带 index.html（避免 /feeds/ 与 /feeds/index.html 重复收录）
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
 # Directory
@@ -97,7 +100,9 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+## 用 'date'：工作区文件的 mtime 会被检出/同步改写，用 mtime 会让 feed 里所有文章
+## 都显示“刚刚更新”。需要真实的更新时间就在 front-matter 里手写 updated。
+updated_option: 'date'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -110,10 +115,18 @@ include:
 exclude:
 ignore:
 
+# Sitemap (hexo-generator-sitemap)
+sitemap:
+  path: sitemap.xml
+  rel: false
+  tags: false
+  categories: false
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: plain
 
 # Deployment
-## 部署由 GitHub Actions 自动完成(.github/workflows/deploy.yml),push 即上线
+## 唯一部署入口：仓库根 ./publish.sh（构建 + rsync 到 sg:/var/www/blog/public/）
+## .github/workflows/deploy.yml 只是换机器时的手动兜底，push 不会自动上线

@@ -1,9 +1,11 @@
 ---
 title: 并查集扩展 - DSU
-tags: 
-	- 并查集
-	- 算法模板
 date: 2022-03-26
+tags:
+  - 并查集
+  - 算法模板
+categories:
+  - 算法
 ---
 
 扩展的并查集原来学过 又忘了 水个文巩固一下..
@@ -308,11 +310,11 @@ int main() {
 
 合并的时候可能有几个地方要注意下 这里又要摆出我的劣质图示了
 
-![](../images/dsuExplain1.png)
+<p class="missing-media">（图片缺失：dsuExplain1.png）</p>
 
 x y相等的时候如何合并
 
-![](../images/dsuExplain2.png)
+<p class="missing-media">（图片缺失：dsuExplain2.png）</p>
 
 x吃y的时候如何合并
 

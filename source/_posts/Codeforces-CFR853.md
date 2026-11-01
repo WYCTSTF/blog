@@ -1,8 +1,10 @@
 ---
 title: Codeforces Round 853「Div. 2」
-tags: 
-  - Codeforces
 date: 2023.2.27
+tags:
+  - Codeforces
+categories:
+  - 题解
 ---
 开始复健
 

@@ -2,10 +2,14 @@
 title: 知乎web体验优化
 date: 2024-09-05 11:53:40
 tags:
-    - 杂项
+  - 杂项
+categories:
+  - 杂谈
 ---
 
 ## 屏蔽无障碍服务
+
+<!-- more -->
 
 ALT+按键切换会弹出无障碍，很烦人，装 ublock origin 插件，在**自定义静态规则**中加入 `||zhihu.com/*aria.js` 即可。
 

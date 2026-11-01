@@ -1,11 +1,13 @@
 ---
 title: CodeTON Round 1 (Div. 1 + Div. 2, Rated, Prizes!) 「A - F」
-tags:
-	- 分类讨论
-	- 模拟
-  - Codeforces
 mathjax: true
 date: 2022-03-25
+tags:
+  - 分类讨论
+  - 模拟
+  - Codeforces
+categories:
+  - 题解
 ---
 
 这场打的有点下饭 D竟然也是简单的分类讨论一下 只能说是不够冷静 没有仔细分析了

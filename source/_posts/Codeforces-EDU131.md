@@ -1,10 +1,12 @@
 ---
 title: Educational Codeforces Round 131
+date: 2022-07-15
 tags:
   - Codeforces
   - 二分
   - 分类讨论
-date: 2022-07-15
+categories:
+  - 题解
 ---
 
 那么，就到此为止吧，再做就不礼貌了

@@ -1,8 +1,10 @@
 ---
 title: Codeforces Round 813 (Div. 2)
-tags: 
-  - Codeforces
 date: 2022-08-14
+tags:
+  - Codeforces
+categories:
+  - 题解
 ---
 
 学好二分，走遍天下都不怕..

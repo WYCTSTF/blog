@@ -1,6 +1,6 @@
 name: Deploy to Server (manual fallback)
 
-# 日常发布走本地 scripts/publish.sh（构建 + rsync，秒级）。
+# 日常发布走仓库根的 ./publish.sh（构建 + rsync，秒级）。
 # 本工作流仅作从源码重建的兜底：本地环境异常或换机器时在 Actions 页手动触发。
 on:
   workflow_dispatch:
@@ -12,8 +12,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
 
       - name: Set up Node.js
         uses: actions/setup-node@v4

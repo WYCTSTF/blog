@@ -2,8 +2,10 @@
 title: nginx容器反代本地端口
 date: 2024-08-30 17:18:36
 tags:
-    - nginx
-    - docker
+  - nginx
+  - docker
+categories:
+  - 工具链
 ---
 
 使用portainer管理docker以后，总是需要 localhost:9000 来跳转，感觉一不美观二不方便。

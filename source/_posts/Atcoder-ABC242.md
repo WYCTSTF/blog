@@ -1,13 +1,17 @@
 ---
 title: Atcoder Beginner Contest 242
-tags: 
-	- Atcoder
-	- DP
 description: At的规律题还是一如既往的让人头疼..
 date: 2022-03-06
+tags:
+  - Atcoder
+  - DP
+categories:
+  - 题解
 ---
 
 ## C - 1111gal password
+
+<!-- more -->
 
 一开始以为有什么数学规律 然后我发现样例那个2 25我就推不出来(太笨了)
 

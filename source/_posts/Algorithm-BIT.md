@@ -1,11 +1,11 @@
 ---
 title: 基础树状数组
-tags: 
-	- 树状数组
-	- 算法模板
-category:
-    - 数据结构
 date: 2022-03-23
+tags:
+  - 树状数组
+  - 算法模板
+categories:
+  - 算法
 ---
 
 睡不着觉 根据以前写的破烂玩意儿复习一下树状数组
@@ -191,7 +191,7 @@ int main() {
 
 $\sum\limits_{i=1}^{x}\sum\limits_{j=1}^{i}b[j]=\sum\limits_{i=1}^{x}(x-i+1)*b[i]$ 这个过程就是把每个b[i]的贡献单独计算一下..
 
-![](/images/bit%20qjmo%20qjqey.png)
+<p class="missing-media">（图片缺失：bit qjmo qjqey.png）</p>
 
 $$\sum\limits_{i=1}^{x}(x-i+1)*b[i]=(x+1)\sum\limits_{i=1}^{x}{b[i]} - \sum \limits_{i=1}^{x} {i * b[i]}$$
 

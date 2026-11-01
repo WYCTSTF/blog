@@ -1,9 +1,11 @@
 ---
 title: Codeforces Round 780 (Div. 3)
-tags: 
-	- 树状数组
-	- Codeforces
 date: 2022-04-02
+tags:
+  - 树状数组
+  - Codeforces
+categories:
+  - 题解
 ---
 
 太菜了 上不了大分

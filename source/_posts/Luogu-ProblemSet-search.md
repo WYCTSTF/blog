@@ -1,10 +1,12 @@
 ---
 title: 枚举贺题记录
+date: 2022-02-07
 tags:
   - DFS
   - BFS
   - 折半枚举
-date: 2022-02-07
+categories:
+  - 题解
 ---
 
 练一练搜索水题

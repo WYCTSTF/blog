@@ -1,8 +1,10 @@
 ---
 title: Codeforces Round 815 (Div. 2)
-tags: 
-  - Codeforces
 date: 2022-08-19
+tags:
+  - Codeforces
+categories:
+  - 题解
 ---
 
 该多练了.

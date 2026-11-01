@@ -2,8 +2,10 @@
 title: asahi-ubuntu 24.04 设置
 date: 2024-08-27 17:29:20
 tags:
-    - ubuntu
-    - linux
+  - ubuntu
+  - linux
+categories:
+  - 工具链
 ---
 
 自用，记录。

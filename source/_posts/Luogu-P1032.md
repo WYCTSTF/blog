@@ -1,10 +1,12 @@
 ---
 title: 洛谷P1032 [NOIP2002 提高组] 字串变换
-tags: 
-  - KMP
-  - 双向BFS
 mathjax: true
 date: 2022-02-12
+tags:
+  - KMP
+  - 双向BFS
+categories:
+  - 题解
 ---
 KMP+双向同时BFS
 

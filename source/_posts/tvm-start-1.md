@@ -2,6 +2,9 @@
 title: TVM新人入坑-跑通demo
 date: 2025-06-06 19:11:17
 tags:
+  - TVM
+categories:
+  - 计算机基础
 ---
 
 本来要在npu上玩的，结果zh的机器tm的不知为什么卡又掉了，必须得系统关机之后物理重启电源。等修完估计答辩也没一两天了，windows上弄个能跑的demo先。

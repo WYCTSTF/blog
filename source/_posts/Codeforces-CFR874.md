@@ -2,7 +2,9 @@
 title: Codeforces-CFR874
 date: 2023-05-23 20:29:42
 tags:
-    - Codeforces
+  - Codeforces
+categories:
+  - 题解
 ---
 
 div. 3糕手下大分

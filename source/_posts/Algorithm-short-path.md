@@ -1,5 +1,6 @@
 ---
 title: 最短路复习
+date: 2022-02-26
 tags:
   - Floyd
   - Dijkstra
@@ -7,7 +8,8 @@ tags:
   - Bellman-Ford
   - 最短路
   - 算法模板
-date: 2022-02-26
+categories:
+  - 算法
 ---
 
 记搜写到NOIP2017逛公园的时候 发现之前一直说复习最短路
@@ -342,7 +344,7 @@ int main() {
 
 无法处理带负权的图
 
-![](/images/DijkstraCannot.png)
+<p class="missing-media">（图片缺失：DijkstraCannot.png）</p>
 
 ```cpp
 int main() {

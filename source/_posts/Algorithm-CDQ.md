@@ -1,11 +1,11 @@
 ---
 title: CDQ分治笔记
-tags: 
-	- 算法模板
-	- CDQ分治
-category:
-    - 算法
 date: 2022-09-19
+tags:
+  - 算法模板
+  - CDQ分治
+categories:
+  - 算法
 ---
 
 同样是两三年前就听说的知识点，现在再来学..

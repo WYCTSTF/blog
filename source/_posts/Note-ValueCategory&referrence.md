@@ -1,8 +1,10 @@
 ---
 title: 值类别和引用浅析
-tags:
-    - C++
 date: 2023.3.24
+tags:
+  - C++
+categories:
+  - 计算机基础
 ---
 
 本文使用的Clang/LLVM环境：

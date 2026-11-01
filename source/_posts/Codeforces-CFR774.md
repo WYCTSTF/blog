@@ -1,15 +1,19 @@
 ---
 title: Codeforces Round 774 (Div. 2)「C - E」
-tags: 
-	- 树形DP
-	- DFS
-	- 位运算
-	- Codeforces
 description: 好久没做CF了 要加练
 date: 2022-03-06
+tags:
+  - 树形DP
+  - DFS
+  - 位运算
+  - Codeforces
+categories:
+  - 题解
 ---
 
 ## C. Factorials and Powers of Two
+
+<!-- more -->
 
 加数算上阶乘和 $2$ 的次幂 一共好像有52个左右
 

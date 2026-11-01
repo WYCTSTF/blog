@@ -3,6 +3,8 @@ title: 洛谷官方题单 「图论2-1」树
 date: 2023-06-02 12:38:05
 tags:
   - DFS
+categories:
+  - 题解
 ---
 
 洛谷官方题单 [【图论2-1】树](https://www.luogu.com.cn/training/207#problems) 部分题解

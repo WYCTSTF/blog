@@ -2,11 +2,15 @@
 title: NVIM_APPNAME
 date: 2024-09-21 05:03:18
 tags:
-    - neovim
-    - vim
+  - neovim
+  - vim
+categories:
+  - 工具链
 ---
 
 nvim 多套配置快速切换
+
+<!-- more -->
 
 配置拉下来放在 `~/.config/` 和 nvim 文件夹同级
 

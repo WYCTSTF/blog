@@ -1,8 +1,10 @@
 ---
 title: Codeforces Round 864
-tags: 
-  - Codeforces
 date: 2023.4.10
+tags:
+  - Codeforces
+categories:
+  - 题解
 ---
 
 越来越感觉前面几题浪费时间了 （对想题能力没有什么提升 实现和具体的考虑则需要更专注一点）

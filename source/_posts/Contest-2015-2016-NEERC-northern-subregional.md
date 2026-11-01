@@ -1,8 +1,10 @@
 ---
 title: 2015-2016 ACM-ICPC, NEERC, Northern Subregional Contest
-tags:
-    - Codeforces
 date: 2022-07-16
+tags:
+  - Codeforces
+categories:
+  - 题解
 ---
 
 今天问xy打的什麽比赛，原来是他们学校找了一场neerc在训练

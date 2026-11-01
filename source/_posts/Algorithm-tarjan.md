@@ -1,12 +1,14 @@
 ---
 title: 连通性问题 笔记
-tags:
-    - 算法模板
-    - Tarjan
 date: 2022-07-25
+tags:
+  - 算法模板
+  - Tarjan
+categories:
+  - 算法
 ---
 
-根绝OI-wiki和李煜东的[课件](/file/图连通性若干拓展问题探讨_李煜东.pptx)来学习，因为公开在Share OI上，我也就传上来了
+根绝OI-wiki和李煜东的课件来学习，因为公开在Share OI上，我也就传上来了
 
 <!-- more -->
 

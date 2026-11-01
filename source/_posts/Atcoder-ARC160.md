@@ -2,9 +2,11 @@
 title: Atcoder Regular Contest 160
 date: 2023-05-19 06:22:01
 tags:
-    - Atcoder
-    - 数论分块
-    - 数位DP
+  - Atcoder
+  - 数论分块
+  - 数位DP
+categories:
+  - 题解
 ---
 
 开始写at

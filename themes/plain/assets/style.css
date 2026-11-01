@@ -206,3 +206,38 @@ summary {
 .katex {
   font-size: 1.05em;
 }
+
+h1, h2, h3, h4 {
+  scroll-margin-top: 1rem;
+}
+
+.toc {
+  margin: 1.5rem 0 2rem;
+  padding: .75rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+}
+
+.toc-title {
+  margin: 0 0 .4rem;
+  font-weight: 600;
+}
+
+.toc ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.toc li {
+  margin: .15rem 0;
+}
+
+.toc li.toc-h3 {
+  margin-left: 1rem;
+  font-size: .95em;
+}
+
+.missing-media {
+  color: var(--muted);
+  font-style: italic;
+}

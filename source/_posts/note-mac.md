@@ -3,6 +3,8 @@ title: MacOS优化使用体验
 date: 2023-10-15 15:29:19
 tags:
   - 杂项
+categories:
+  - 工具链
 ---
 
 都是比较主观的设置

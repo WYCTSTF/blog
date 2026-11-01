@@ -2,7 +2,9 @@
 title: 向gitignore中加入tracked file
 date: 2023-05-24 00:23:06
 tags:
-    - git
+  - git
+categories:
+  - 工具链
 ---
 
 远程仓库的文件，将其加入gitignore,但是保留本地和远程的内容，后续不再更新。

@@ -1,8 +1,10 @@
 ---
 title: 线代笔记
-tags:
-    - 线性代数 
 date: 2022-05-08
+tags:
+  - 线性代数
+categories:
+  - 计算机基础
 ---
 
 看的GS的课 [B站上有很多](https://www.bilibili.com/video/BV1bb411H7JN?p=3&spm_id_from=pageDriver)

@@ -1,9 +1,11 @@
 ---
 title: CSAPP 第二章学习笔记
 date: 2024-10-15 18:42:53
+mathjax: true
 tags:
   - csapp
-mathjax: true
+categories:
+  - 计算机基础
 ---
 
 这章关于浮点数、精度、存储

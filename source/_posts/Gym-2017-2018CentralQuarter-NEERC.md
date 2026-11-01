@@ -1,9 +1,11 @@
 ---
 title: 2017-2018 ICPC Central Quarter Final of NEERC - C 「Magic FootBall」
+date: 2022-03-11
 tags:
   - 思维
   - 剪枝
-date: 2022-03-11
+categories:
+  - 题解
 ---
 
 XY给我推荐的一道好题
@@ -82,7 +84,7 @@ void dfs(int now, int left) {
 
 因此我们可以翻转实现前后拼接 上图说明会好一点 原谅我的劣质图示。。
 
-![](/images/2017-2018CentralQuarter-NEERC.jpg)
+<p class="missing-media">（图片缺失：2017-2018CentralQuarter-NEERC.jpg）</p>
 
 那么主要的做法就很了然了 写了一遍 交上去
 

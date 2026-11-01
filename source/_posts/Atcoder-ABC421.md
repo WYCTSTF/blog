@@ -2,6 +2,9 @@
 title: AtCoder-ABC421
 date: 2025-09-04 23:42:53
 tags:
+  - Atcoder
+categories:
+  - 题解
 ---
 
 [links](https://atcoder.jp/contests/abc421)

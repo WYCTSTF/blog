@@ -1,10 +1,12 @@
 ---
 title: Windows 配置 WSL2
-tags:
-    - wsl
-    - linux
 date: 2023.3.11
 # top: 2
+tags:
+  - wsl
+  - linux
+categories:
+  - 工具链
 ---
 
 挺多人搁那儿吹捧，怎么说呢.... 有总比没有好吧

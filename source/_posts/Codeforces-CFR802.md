@@ -1,8 +1,10 @@
 ---
 title: Codeforces Round 802 (Div. 2)「A - D」
-tags: 
-  - Codeforces
 date: 2022-06-21
+tags:
+  - Codeforces
+categories:
+  - 题解
 ---
 
 好久没打CF

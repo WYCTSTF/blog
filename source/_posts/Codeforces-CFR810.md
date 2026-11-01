@@ -1,8 +1,10 @@
 ---
 title: Codeforces Round 810 (Div. 2)
 date: 2022-07-24
-tags: 
+tags:
   - Codeforces
+categories:
+  - 题解
 ---
 
 同一场的div. 1 E弄出了个原题... 轩然大波..
@@ -87,11 +89,11 @@ int main() {
 
 也就是对于下完雨的整个 $\{a_j\}$，考虑 $a_j>m$ 的时候，要求这样的 $a_j$ 都在蓝色区域内，这样消除第 $i$ 块的影响时，才会满足条件
 
-![](/images/801_1.png)
+<p class="missing-media">（图片缺失：801_1.png）</p>
 
 然后反过来，对于 $a_j>m$，需要 $p_i+m$ 满足对应的性质，才能够把所有的非法变成合法
 
-![](/images/801_2.png)
+<p class="missing-media">（图片缺失：801_2.png）</p>
 
 如果 $(x_i,p_i+m)$ 在红色区域内，就能修改 $a_j$，取一个红色区域并，可以**用两个函数的截距取最值**的方法来维护
 

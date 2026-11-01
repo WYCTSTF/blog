@@ -1,12 +1,14 @@
 ---
 title: 字符串基础笔记
-tags:
-    - 算法模板
-    - KMP
-    - Hash
-    - Manacher
-    - Trie
 date: 2022-02-10
+tags:
+  - 算法模板
+  - KMP
+  - Hash
+  - Manacher
+  - Trie
+categories:
+  - 算法
 ---
 
 hash, trie, kmp, manacher
@@ -149,7 +151,7 @@ $next_i=\max\{j\mid j < i, A_{i-j+1..i} = A_{1..j}\}$
 
 则发现 $A[j_0-j_1+1+1\sim j_0]=A[i-j_1+1\sim i]=A[1\sim j_1]$
 
-![即图中的标黄部分](/images/kmp1.png)
+<p class="missing-media">（图片缺失：即图中的标黄部分）</p>
 
 不难发现对于$A_{1...j_0}$，前$j_1$和后$j_1$是相同的，并且这个$j_1$定义最大
 

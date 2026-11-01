@@ -1,10 +1,12 @@
 ---
 title: 平衡树相关
-tags: 
-	- 算法模板
-	- 平衡树
 date: 2022-11-16
 mathjax: true
+tags:
+  - 算法模板
+  - 平衡树
+categories:
+  - 算法
 ---
 
 整理.
@@ -24,7 +26,7 @@ mathjax: true
 
 考虑这个过程，不难理解，可以用维基百科上的图模拟一下
 
-![](../images/cartesian-tree1.png)
+<p class="missing-media">（图片缺失：cartesian-tree1.png）</p>
 
 -----
 

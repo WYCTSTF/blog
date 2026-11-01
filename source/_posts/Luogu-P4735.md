@@ -1,8 +1,10 @@
 ---
 title: 洛谷P4735 最大异或和
-tags:
-    - 可持久化Trie
 date: 2022-02-02
+tags:
+  - 可持久化Trie
+categories:
+  - 题解
 ---
 
 信誓旦旦的学了可持久化Trie和01Trie来搞，结果出了一点问题，被卡了好久

@@ -2,8 +2,10 @@
 title: Getting Started with the LLVM System
 date: 2024-10-28 16:47:52
 tags:
-    - LLVM
-    - 编译原理
+  - LLVM
+  - 编译原理
+categories:
+  - 计算机基础
 ---
 
 对 [Getting Started with the LLVM System](https://llvm.org/docs/GettingStarted.html) 的部分翻译 & 学习笔记

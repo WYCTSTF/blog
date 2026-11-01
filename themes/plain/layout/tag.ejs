@@ -1,4 +1,5 @@
-<h1>Tag: <%= page.tag %></h1>
+<h1>标签：<%= page.tag %></h1>
+<p class="meta"><%= page.posts.length %> 篇文章</p>
 <ul class="archive-list">
 <% page.posts.each(function(post){ %>
   <li><time datetime="<%- post.date.toISOString() %>"><%= date(post.date, 'YYYY-MM-DD') %></time> <a href="<%- url_for(post.path) %>"><%= post.title %></a></li>

@@ -2,7 +2,9 @@
 title: The Missing Semester 笔记
 date: 2023.2.13
 tags:
-    - Shell
+  - Shell
+categories:
+  - 工具链
 ---
 
 b站刷美女的时候看到bash教程（大概还是低质量卖课，不过这方面我不懂确实不好下结论），感觉需要学一下

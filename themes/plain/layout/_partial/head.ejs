@@ -1,18 +1,43 @@
 <%
-  var title = config.title;
   var pageTitle = page.title;
-  if (!pageTitle && page.archive) {
-    pageTitle = 'Archives';
+  if (!pageTitle) {
+    if (page.type === 'tags') pageTitle = '标签';
+    else if (page.type === 'categories') pageTitle = '分类';
+    else if (page.tag) pageTitle = '标签：' + page.tag;
+    else if (page.category) pageTitle = '分类：' + page.category;
+    else if (page.archive) pageTitle = '归档';
   }
-  if (pageTitle && pageTitle !== config.title) {
-    title = pageTitle + ' | ' + config.title;
+  if (page.current && page.current > 1) {
+    pageTitle = (pageTitle ? pageTitle + ' ' : '') + '第 ' + page.current + ' 页';
   }
+  var title = (pageTitle && pageTitle !== config.title) ? pageTitle + ' | ' + config.title : config.title;
+
+  // 正文摘要优先，站点描述只做兜底（否则每篇文章的 description 都一样）
+  var description = page.description || '';
+  if (!description) {
+    var raw = page.excerpt || page.content || '';
+    description = truncate(strip_html(raw).replace(/\s+/g, ' ').trim(), { length: 120 });
+  }
+  if (!description) description = config.description || '';
+
+  var path = (page.path || '').replace(/index\.html$/, '');
+  var canonical = full_url_for(path);
+  var isPost = page.layout === 'post';
 %>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <title><%= title %></title>
-  <% if (config.description) { %><meta name="description" content="<%= config.description %>"><% } %>
-  <link rel="icon" href="data:,">
+  <% if (description) { %><meta name="description" content="<%= description %>"><% } %>
+  <link rel="canonical" href="<%= canonical %>">
+  <meta property="og:type" content="<%= isPost ? 'article' : 'website' %>">
+  <meta property="og:title" content="<%= pageTitle || config.title %>">
+  <meta property="og:url" content="<%= canonical %>">
+  <meta property="og:site_name" content="<%= config.title %>">
+  <% if (description) { %><meta property="og:description" content="<%= description %>"><% } %>
+  <% if (isPost && page.date) { %><meta property="article:published_time" content="<%= page.date.toISOString() %>"><% } %>
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230645ad'/%3E%3Ctext x='16' y='23.5' font-size='19' font-family='-apple-system,Segoe UI,sans-serif' font-weight='600' fill='%23fff' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
   <link rel="alternate" type="application/atom+xml" title="<%= config.title %>" href="<%- url_for('/atom.xml') %>">
+  <link rel="sitemap" type="application/xml" href="<%- url_for('/sitemap.xml') %>">
   <style><%- inline_css('assets/style.css') %></style>

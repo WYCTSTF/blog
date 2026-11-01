@@ -1,17 +1,25 @@
 <% if (page.type === 'tags') { %>
-  <h1>Tags</h1>
+  <h1>标签</h1>
   <ul class="term-list">
-  <% site.tags.each(function(tag){ %>
+  <% site.tags.sort('name').each(function(tag){ %>
     <li><a href="<%- url_for(tag.path) %>"><%= tag.name %></a> <span class="count"><%= tag.posts.length %></span></li>
   <% }) %>
   </ul>
 <% } else if (page.type === 'categories') { %>
-  <h1>Categories</h1>
+  <h1>分类</h1>
   <ul class="term-list">
-  <% site.categories.each(function(category){ %>
+  <% site.categories.sort('name').each(function(category){ %>
     <li><a href="<%- url_for(category.path) %>"><%= category.name %></a> <span class="count"><%= category.posts.length %></span></li>
   <% }) %>
   </ul>
+  <% site.categories.sort('name').each(function(category){ %>
+    <h2><%= category.name %></h2>
+    <ul class="archive-list">
+    <% category.posts.sort('-date').each(function(post){ %>
+      <li><time datetime="<%- post.date.toISOString() %>"><%= date(post.date, 'YYYY-MM-DD') %></time> <a href="<%- url_for(post.path) %>"><%= post.title %></a></li>
+    <% }) %>
+    </ul>
+  <% }) %>
 <% } else { %>
   <article class="page">
     <h1><%= page.title %></h1>

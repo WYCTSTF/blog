@@ -2,7 +2,10 @@
 title: 小刻也能看懂的「neovim配置」「未完成」
 date: 2024-02-08 23:26:52
 tags:
+  - neovim
+  - vim
 categories:
+  - 工具链
 ---
 
 上次折腾neovim快是一年前了(2023.3)，趁过年没什么要紧事干再折腾一下。

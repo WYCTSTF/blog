@@ -1,8 +1,10 @@
 ---
 title: Codeforces Round 816 (Div. 2)
-tags: 
-  - Codeforces
 date: 2022-08-21
+tags:
+  - Codeforces
+categories:
+  - 题解
 ---
 
 纯 粹 菜 鸡

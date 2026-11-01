@@ -1,9 +1,11 @@
 ---
 title: Codeforces Round 776 (Div. 3)「B - E」
-tags: 
-	- Codeforces
-	- 模拟
 date: 2022-03-09
+tags:
+  - Codeforces
+  - 模拟
+categories:
+  - 题解
 ---
 
 Div3.. 倒开车失败
@@ -116,9 +118,9 @@ int main() {
 
 所有的$a_i$升序给出
 
-![](../../images/CFR776Ep1.png)
+<p class="missing-media">（图片缺失：CFR776Ep1.png）</p>
 
-![](../../images/CFR776Ep2.png)
+<p class="missing-media">（图片缺失：CFR776Ep2.png）</p>
 
 
 如样例所示 第2场考试调整到第12天 最短间隔从1变到2

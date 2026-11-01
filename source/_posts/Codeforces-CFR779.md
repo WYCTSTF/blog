@@ -1,10 +1,12 @@
 ---
 title: Codeforces Round 779 (Div. 2)
-tags: 
-	- Codeforces
-	- Trie
-	- DP
 date: 2022-03-29
+tags:
+  - Codeforces
+  - Trie
+  - DP
+categories:
+  - 题解
 ---
 
 昨天凌晨发生了一件巨~~(好笑)~~丢人的事 整天处于呆滞状态 所以昨天咕了

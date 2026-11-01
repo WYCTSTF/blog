@@ -1,9 +1,11 @@
 ---
 title: 斜率优化DP 笔记
-tags: 
+date: 2022-08-22
+tags:
   - DP
   - 斜率优化
-date: 2022-08-22
+categories:
+  - 算法
 ---
 
 CF 816的E要用到，计划是先学个大概再来写这题
@@ -53,7 +55,7 @@ $$
 
 那就变成求截距最小值
 
-![](/images/slope1.svg)
+<p class="missing-media">（图片缺失：slope1.svg）</p>
 
 
 不难发现备选的点集一定在下[凸包](https://oi-wiki.org/geometry/convex-hull/)上，不用从前 $i-1$ 个点转移过来

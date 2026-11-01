@@ -4,7 +4,7 @@ date: 2026-10-30 00:06:33
 tags:
   - Java
   - 异常
-category:
+categories:
   - Java
 ---
 
